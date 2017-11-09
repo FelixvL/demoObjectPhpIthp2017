@@ -10,14 +10,20 @@ class School{               // Parent SuperClass TopClass
 }
 
 class HighSchool extends School{  // ChildClass SubClass GEEN NAAM VOOR
-    public $name;           // becomes obsolete
+   // public $name;           // becomes obsolete
 //    public $address;     /// Becomes obsolete
     public $eindExamenCommissie;
 }
 class ElementarySchool extends School{
     // MISSING NAME
-    public $address;        // Becomes obsolete overbodig
+    // public $address;        // Becomes obsolete overbodig
     public $playground;
+}
+$zwolseSchoolPlek = new Schoolgebouw();
+$zwolseSchoolPlek->scholen = array(new ElementarySchool, new HighSchool());
+
+class Schoolgebouw{
+    public $scholen;
 }
 
 
