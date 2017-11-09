@@ -1,6 +1,70 @@
 
 <?php
-            ///// ARTIKEL 1 VAN DE PROGRAMMEER GRONDWET = DRY
+function OntslagRonde(Fireable $fr){
+    $fr->fire();
+}
+
+interface Fireable{
+     public function fire();   // abstract function does NOT have body
+}
+interface Inzetbaar{
+    public function inzetten();
+}
+class Person{
+    
+}
+class HAVOStudent extends Person{
+    
+}
+class Teacher  extends Person implements Fireable, Inzetbaar{
+    public function inzetten(){}
+    public function fire(){
+        echo "Go to Schoolboard and submit reason for fire";
+   //     if(reasons are good){
+   //         Teacher is fired
+   //     }
+    }
+}
+class EnglishTeacher extends Teacher{
+    
+}
+
+
+class Employee{
+    
+}
+class Bouwvakker extends Employee implements Fireable{
+    public function fire(){
+        echo "Dont verleng contract next monts ZZP";
+    }
+}
+class StratenLegger extends Bouwvakker{
+    
+}
+class Directeur extends Employee{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///// ARTIKEL 1 VAN DE PROGRAMMEER GRONDWET = DRY
             ///// CONSTITUTION ARTICLE 1 OF THE PROGRAMMER = DRY
 
 
