@@ -1,5 +1,37 @@
 
 <?php
+            ///// ARTIKEL 1 VAN DE PROGRAMMEER GRONDWET = DRY
+            ///// CONSTITUTION ARTICLE 1 OF THE PROGRAMMER = DRY
+
+
+class School{               // Parent SuperClass TopClass
+    public $name;
+    public $address;
+}
+
+class HighSchool extends School{  // ChildClass SubClass GEEN NAAM VOOR
+    public $name;           // becomes obsolete
+//    public $address;     /// Becomes obsolete
+    public $eindExamenCommissie;
+}
+class ElementarySchool extends School{
+    // MISSING NAME
+    public $address;        // Becomes obsolete overbodig
+    public $playground;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //person firstname age birthdate  // required information
 //person childsfirstname // optional information
